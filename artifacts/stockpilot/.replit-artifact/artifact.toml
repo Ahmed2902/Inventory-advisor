@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "StockPilot"
+description = "A polished interactive ecommerce intelligence demo that combines inventory coverage, sales velocity, and paid advertising performance to help ecommerce owners decide what to scale, hold, reduce, or pause."
+version = "1.0.0"
+id = "artifacts/stockpilot"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 18789
+
+[services.development]
+run = "pnpm --filter @workspace/stockpilot run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/stockpilot", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/stockpilot/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "18789"
+BASE_PATH = "/"

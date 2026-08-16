@@ -1,0 +1,1468 @@
+Build a polished, production-quality **interactive SaaS DEMO** for an ecommerce intelligence product.
+
+This is NOT the real production SaaS yet.
+
+The goal is to create a convincing clickable prototype that can be shown to real ecommerce business owners to validate whether they would use and pay for the product.
+
+Do not integrate with real Shopify, Meta Ads, Google Ads, TikTok, billing, authentication providers, or external APIs yet.
+
+Use realistic mock data throughout.
+
+# PRODUCT CONCEPT
+
+The product connects ecommerce inventory data with paid advertising performance.
+
+It helps ecommerce owners answer:
+
+**“Given my inventory, sales velocity, incoming stock, and advertising performance, which products should I scale, hold, reduce, or stop advertising?”**
+
+The target user is primarily a small/mid-sized ecommerce founder or owner who:
+
+* owns physical inventory
+* runs a Shopify store
+* runs Meta Ads
+* manages advertising personally or with a very small team
+* does not have a dedicated inventory planner/data analyst
+* wants very clear recommendations rather than complicated analytics
+
+The product should feel like:
+
+**an intelligent decision assistant between Shopify inventory and Meta Ads.**
+
+Do NOT make it feel like:
+
+* a generic ERP
+* an inventory spreadsheet
+* an ad manager clone
+* an AI chatbot
+* an enterprise analytics system
+
+The value proposition is:
+
+> **Know which products you can safely scale before your inventory runs out.**
+
+Alternative supporting copy:
+
+> Turn your Shopify inventory and Meta performance into simple growth decisions.
+
+# IMPORTANT PRODUCT PRINCIPLE
+
+The application should NOT merely tell the merchant:
+
+“Stock is low.”
+
+Shopify already provides inventory visibility.
+
+Instead, the product should combine:
+
+* inventory
+* recent sales velocity
+* historical sales velocity
+* advertising spend
+* advertising performance
+* incoming inventory
+* estimated stock coverage
+
+and produce an actionable recommendation:
+
+* SCALE
+* INCREASE
+* HOLD
+* REDUCE
+* PAUSE
+
+For this demo, all calculations can use deterministic mock logic and pre-generated realistic data.
+
+Do NOT pretend the demo contains a sophisticated real AI forecasting model.
+
+Where appropriate, describe results as:
+
+* estimated
+* projected
+* likely
+* confidence range
+
+instead of falsely precise predictions.
+
+---
+
+# DESIGN DIRECTION
+
+Create a premium modern B2B SaaS dashboard.
+
+Think:
+
+* Linear
+* Stripe
+* Vercel
+* modern Shopify apps
+* premium fintech dashboards
+
+Design should be:
+
+* clean
+* elegant
+* high information density without clutter
+* desktop-first
+* responsive
+* visually sophisticated
+* credible enough to show real business owners
+
+Use:
+
+* lots of whitespace
+* subtle borders
+* very subtle shadows
+* modern typography
+* restrained use of color
+* cards with good hierarchy
+* beautiful charts
+* smooth hover states
+* tasteful transitions
+* polished empty/loading states where relevant
+
+Avoid:
+
+* huge gradients
+* childish UI
+* excessive rounded cards everywhere
+* excessive purple
+* generic AI imagery
+* excessive emojis
+* fake stock photos
+
+Use semantic status colors:
+
+* green = Scale / healthy
+* blue = Increase
+* neutral = Hold
+* orange = Reduce
+* red = Pause / serious stockout risk
+
+The recommendations should visually stand out immediately.
+
+---
+
+# APP NAME
+
+Use a temporary placeholder brand:
+
+**StockPilot**
+
+Subtitle:
+
+**Inventory-aware growth intelligence**
+
+Make it easy to rename later.
+
+---
+
+# MAIN NAVIGATION
+
+Left sidebar:
+
+1. Overview
+2. Products
+3. Opportunities
+4. Risks
+5. Simulator
+6. Activity
+
+Bottom/sidebar section:
+
+* Integrations
+* Settings
+
+At the top of sidebar show:
+
+StockPilot
+
+Store:
+
+**Aster & Co.**
+
+Show Shopify connected and Meta connected with small status indicators.
+
+---
+
+# SCREEN 1 — OVERVIEW DASHBOARD
+
+This should be the strongest screen in the demo.
+
+Header:
+
+**Good morning, Sarah**
+
+Subheading:
+
+**Here’s where inventory is affecting growth today.**
+
+Top summary cards:
+
+### Products analyzed
+
+48
+
+### Stockout risks
+
+4
+
+### Scale opportunities
+
+6
+
+### Inventory at risk
+
+$18,420
+
+Add one additional metric:
+
+### Ad spend monitored
+
+$31,850 / month
+
+Below these metrics create:
+
+# Recommended actions
+
+Show 4 major product recommendation cards.
+
+---
+
+## PRODUCT 1
+
+Black Essential Hoodie / Medium
+
+Image placeholder: realistic dark hoodie thumbnail
+
+Status:
+
+**REDUCE**
+
+Inventory:
+94 units
+
+Recent sales velocity:
+8.1 units/day
+
+30-day average:
+5.2/day
+
+Meta spend:
+$210/day
+
+ROAS:
+4.6x
+
+Incoming stock:
+300 units
+
+Expected arrival:
+19 days
+
+Estimated stock coverage:
+10–13 days
+
+Stockout probability before restock:
+86%
+
+Recommendation:
+
+**Do not scale this campaign further. Demand has accelerated faster than available inventory can support before the next shipment arrives.**
+
+Secondary text:
+
+Consider reducing promotion temporarily or accelerating replenishment.
+
+Buttons:
+
+* View analysis
+* Simulate spend
+
+---
+
+## PRODUCT 2
+
+Classic White Hoodie
+
+Status:
+
+**SCALE**
+
+Inventory:
+784 units
+
+Recent sales:
+5.8/day
+
+Meta spend:
+$45/day
+
+ROAS:
+4.3x
+
+Estimated inventory coverage:
+112–138 days
+
+Recommendation:
+
+**Inventory is unlikely to constrain reasonable campaign growth. This product has strong advertising performance and substantial available stock.**
+
+Button:
+
+* Explore scaling
+
+---
+
+## PRODUCT 3
+
+Everyday Running Shoe / Black / 42
+
+Status:
+
+**HOLD**
+
+Inventory:
+164
+
+Sales:
+6.2/day
+
+Restock:
+28 days
+
+Meta spend:
+$110/day
+
+ROAS:
+3.8x
+
+Estimated coverage:
+24–29 days
+
+Recommendation:
+
+**Current demand and inventory are approximately balanced. Maintain current spend until the upcoming shipment is confirmed.**
+
+---
+
+## PRODUCT 4
+
+Linen Shirt / Sand
+
+Status:
+
+**INCREASE**
+
+Inventory:
+423
+
+Sales:
+2.8/day
+
+Meta spend:
+$28/day
+
+ROAS:
+4.7x
+
+Inventory coverage:
+135+ days
+
+Recommendation:
+
+**Strong margin and advertising efficiency with excess inventory make this a potential growth candidate.**
+
+---
+
+# INVENTORY × GROWTH MATRIX
+
+Below recommendations create a visual scatter plot.
+
+X axis:
+
+**Inventory coverage**
+
+Low → High
+
+Y axis:
+
+**Advertising efficiency**
+
+Low → High
+
+Plot products as dots.
+
+Create four conceptual quadrants:
+
+Top-right:
+**Scale opportunities**
+
+Top-left:
+**Profitable but inventory constrained**
+
+Bottom-right:
+**Overstock / improve marketing**
+
+Bottom-left:
+**Low priority**
+
+Hovering over a product should display:
+
+* product
+* inventory
+* ROAS
+* recommendation
+
+This visualization should make the product concept instantly understandable.
+
+---
+
+# SCREEN 2 — PRODUCTS
+
+Create a sophisticated data table.
+
+Columns:
+
+Product
+
+Status
+
+Inventory
+
+7d velocity
+
+30d velocity
+
+Days of stock
+
+Meta spend
+
+ROAS
+
+Next restock
+
+Risk
+
+Recommendation
+
+Use around 15 realistic products.
+
+Filters:
+
+* All
+* Scale
+* Increase
+* Hold
+* Reduce
+* Pause
+
+Additional filters:
+
+* High stockout risk
+* Overstock
+* No incoming inventory
+* Campaign active
+
+Search input.
+
+Sort by:
+
+* stockout risk
+* opportunity
+* inventory
+* spend
+* ROAS
+
+Each row should be clickable.
+
+---
+
+# SCREEN 3 — PRODUCT DETAIL
+
+Make this a major part of the demo.
+
+Use:
+
+**Black Essential Hoodie / Medium**
+
+Top section:
+
+Image
+
+Product name
+
+SKU:
+HOD-BLK-M
+
+Status:
+**REDUCE**
+
+Recommendation panel:
+
+# Recommendation
+
+**Do not increase advertising right now.**
+
+At current demand, inventory is likely to run out before the next replenishment arrives.
+
+Current Meta budget:
+$210/day
+
+Confidence:
+**High**
+
+Then show 4 metric cards:
+
+Inventory:
+94
+
+Recent demand:
+8.1/day
+
+Expected stock coverage:
+10–13 days
+
+Restock:
+19 days
+
+---
+
+# SALES VELOCITY CHART
+
+Create a line chart showing units sold/day for previous 60 days.
+
+Show:
+
+30-day baseline around 5/day.
+
+Then approximately two weeks ago sales accelerate toward 8–10/day.
+
+Add a vertical marker:
+
+**Meta campaign scaled**
+
+Show a corresponding spend line or secondary chart below.
+
+This visually demonstrates:
+
+Advertising increased → demand accelerated → inventory coverage decreased.
+
+Do NOT claim causality with certainty.
+
+Add a note:
+
+**Demand increased during the period in which Meta spend increased. Other factors may also contribute.**
+
+---
+
+# INVENTORY PROJECTION CHART
+
+Create a chart:
+
+Y:
+Inventory units
+
+X:
+next 30 days
+
+Current inventory starts at 94.
+
+Projected inventory falls over time.
+
+Show shaded forecast range.
+
+Add vertical line:
+
+**Expected restock — Sep 5**
+
+Show inventory reaching zero BEFORE the restock under the current-demand scenario.
+
+Make this visually excellent.
+
+Include three scenario lines:
+
+* Conservative demand
+* Expected demand
+* High demand
+
+---
+
+# WHY THIS RECOMMENDATION?
+
+Create an explainability panel.
+
+Example:
+
+**Why REDUCE?**
+
+1. Sales velocity increased 56% over the last 14 days.
+2. Current inventory is approximately 10–13 days of expected demand.
+3. Next replenishment is approximately 19 days away.
+4. Meta spend increased 75% during the recent demand acceleration.
+5. At current velocity there is a high probability of a stockout before replenishment.
+
+Then:
+
+**What you can do**
+
+* Hold current budget
+* Reduce campaign exposure
+* Accelerate restock
+* Move demand toward another product
+
+This explanation is extremely important.
+
+The product should never feel like a black box.
+
+---
+
+# SCREEN 4 — OPPORTUNITIES
+
+Title:
+
+**Growth Opportunities**
+
+Subheading:
+
+**Products where inventory can support more demand.**
+
+Rank products using:
+
+1. advertising performance
+2. margin
+3. available inventory
+4. inventory coverage
+5. current advertising exposure
+
+Show opportunity cards.
+
+Example:
+
+Classic White Hoodie
+
+**SCALE**
+
+Inventory:
+784
+
+Coverage:
+124 days
+
+Current Meta spend:
+$45/day
+
+ROAS:
+4.3x
+
+Gross margin:
+68%
+
+Opportunity:
+
+**Inventory is significantly higher than expected demand while advertising remains efficient.**
+
+Buttons:
+
+* Simulate +25%
+* Simulate +50%
+* View product
+
+Another:
+
+Linen Shirt
+
+INCREASE
+
+Another:
+
+Leather Wallet
+
+SCALE
+
+Add an estimated opportunity section:
+
+**Potential inventory unlocked**
+
+Not a fake revenue guarantee.
+
+Phrase carefully:
+
+**$34,200 of inventory currently has healthy marketing economics and high stock coverage.**
+
+---
+
+# SCREEN 5 — RISKS
+
+Title:
+
+**Inventory Risks**
+
+Sections:
+
+Critical
+
+Warning
+
+Watch
+
+Critical example:
+
+Black Hoodie / M
+
+86% stockout probability before restock
+
+Meta spend:
+$210/day
+
+Restock:
+19 days
+
+Expected inventory:
+0 in 10–13 days
+
+Warning:
+
+Running Shoes / 42
+
+Hold campaign growth until replenishment.
+
+Add filters:
+
+* Stockout
+* Shipment delay
+* Inventory imbalance
+* High spend / low coverage
+
+---
+
+# SCREEN 6 — SCENARIO SIMULATOR
+
+This is one of the most important validation screens.
+
+Title:
+
+**What if I change my ad spend?**
+
+Product selector:
+
+Black Essential Hoodie / Medium
+
+Current:
+
+Meta spend:
+$200/day
+
+Inventory:
+180
+
+Next restock:
+17 days
+
+Recent sales:
+7.8/day
+
+Add a slider:
+
+**Meta budget change**
+
+Range:
+
+-50% → +100%
+
+Presets:
+
+-50%
+-25%
+Current
++25%
++50%
++100%
+
+As the slider changes, dynamically update mock projected values.
+
+Display comparison table:
+
+CURRENT
+
+Spend:
+$200/day
+
+Expected demand:
+7.8/day
+
+Estimated stockout:
+18 days
+
+Risk:
+Medium
+
+Then for +25%:
+
+Spend:
+$250/day
+
+Expected demand:
+8.6–9.4/day
+
+Estimated stockout:
+15–17 days
+
+Risk:
+High
+
+Then +50%:
+
+Spend:
+$300/day
+
+Expected demand:
+9.3–10.5/day
+
+Estimated stockout:
+13–15 days
+
+Risk:
+Critical
+
+Do NOT simply assume sales scale linearly with advertising spend.
+
+Use diminishing returns in the mock model.
+
+For example:
+
++25% spend might increase expected demand only 10–18%.
+
++50% spend might increase expected demand 20–35%.
+
++100% spend might increase expected demand 35–55%.
+
+Clearly label:
+
+**Demo simulation — projected ranges, not guarantees.**
+
+Under the simulator show:
+
+# Recommended action
+
+**HOLD**
+
+Increasing spend currently creates significant stockout risk before replenishment.
+
+Then include:
+
+**What changes this recommendation?**
+
+* shipment arrives earlier
+* additional inventory ordered
+* conversion performance declines
+* campaign demand slows
+
+---
+
+# SCREEN 7 — ACTIVITY
+
+Create a timeline showing historical recommendations.
+
+Examples:
+
+Today 09:12
+
+Black Hoodie changed:
+
+HOLD → REDUCE
+
+Reason:
+Sales velocity increased.
+
+Yesterday
+
+White Hoodie changed:
+
+HOLD → INCREASE
+
+Reason:
+New inventory received.
+
+3 days ago
+
+Running Shoes changed:
+
+SCALE → HOLD
+
+Reason:
+Expected replenishment delayed.
+
+This helps demonstrate the future continuous-monitoring concept.
+
+---
+
+# SCREEN 8 — INTEGRATIONS
+
+This is mock only.
+
+Show:
+
+Shopify
+
+Connected
+
+Last sync:
+2 minutes ago
+
+Data:
+
+* 48 products
+* 103 variants
+* 14,282 orders
+* inventory
+* prices
+* refunds
+
+Meta Ads
+
+Connected
+
+Last sync:
+4 minutes ago
+
+Data:
+
+* 12 campaigns
+* 34 ad sets
+* 91 ads
+* spend
+* conversions
+* revenue
+
+Then disabled/not-yet-available:
+
+Google Ads
+
+Coming soon
+
+TikTok Ads
+
+Coming soon
+
+WooCommerce
+
+Coming soon
+
+Do NOT actually connect anything.
+
+---
+
+# SCREEN 9 — MOCK ONBOARDING
+
+Build a short onboarding flow accessible via:
+
+**View onboarding demo**
+
+Step 1:
+
+Connect your store
+
+Shopify
+
+[Connect Shopify]
+
+Simulate successful connection.
+
+Step 2:
+
+Connect advertising
+
+Meta Ads
+
+[Connect Meta]
+
+Simulate connection.
+
+Step 3:
+
+Choose business goals
+
+Checkboxes:
+
+* Prevent stockouts
+* Know what is safe to scale
+* Reduce excess inventory
+* Improve purchasing decisions
+
+Step 4:
+
+Inventory settings
+
+Example:
+
+Do you track incoming inventory?
+
+Yes / No
+
+Average supplier lead time
+
+14 days
+
+Safety stock preference:
+
+Conservative
+Balanced
+Aggressive
+
+Step 5:
+
+Analysis
+
+Animated progress:
+
+Analyzing 103 variants...
+
+Reading 180 days of sales...
+
+Matching campaigns to products...
+
+Estimating inventory coverage...
+
+Then:
+
+**Your first analysis is ready.**
+
+[Open dashboard]
+
+This onboarding needs to feel excellent because we'll use it when validating whether merchants would be willing to connect Shopify + Meta.
+
+---
+
+# FAKE VALIDATION CTA
+
+Because this is a validation demo, include a persistent CTA:
+
+**Request Early Access**
+
+Clicking it opens a modal:
+
+# Want this for your store?
+
+Fields:
+
+Name
+
+Business name
+
+Store URL
+
+Monthly Meta ad spend:
+
+* Under $1k
+* $1k–$5k
+* $5k–$20k
+* $20k–$50k
+* $50k+
+
+Commerce platform:
+
+* Shopify
+* WooCommerce
+* Salla
+* Other
+
+Question:
+
+**What would you most want this product to help with?**
+
+Options:
+
+* Prevent stockouts
+* Know when to scale ads
+* Know when to reduce ads
+* Move excess inventory
+* Plan inventory purchases
+
+Email
+
+Button:
+
+**Request Pilot**
+
+For demo purposes, store submissions locally or in a simple Replit database if easy.
+
+Do not build complex backend infrastructure.
+
+---
+
+# MOCK DATA
+
+Create coherent realistic data.
+
+Products should include categories like:
+
+* apparel
+* footwear
+* accessories
+
+Use approximately:
+
+48 products
+
+103 variants
+
+Make numbers consistent across screens.
+
+For example, if Black Hoodie has 94 inventory on dashboard, do not show 170 on product detail.
+
+Maintain one central mock dataset and derive every screen from it.
+
+Each product object should contain fields such as:
+
+id
+
+name
+
+variant
+
+sku
+
+inventory
+
+incomingInventory
+
+restockDate
+
+sales7d
+
+sales30d
+
+adSpendDaily
+
+roas
+
+grossMargin
+
+inventoryCoverage
+
+stockoutProbability
+
+recommendation
+
+confidence
+
+reason
+
+Generate historical arrays for charts.
+
+---
+
+# RECOMMENDATION LOGIC FOR DEMO
+
+Implement simple deterministic rules so interactions feel real.
+
+Example logic:
+
+PAUSE:
+extremely low inventory or guaranteed stockout and active advertising.
+
+REDUCE:
+high probability of stockout before incoming replenishment.
+
+HOLD:
+inventory approximately matches expected replenishment period.
+
+INCREASE:
+healthy inventory + profitable ads + moderate stock coverage.
+
+SCALE:
+high inventory coverage + strong ROAS + healthy margin.
+
+Allow the simulator to modify the recommendation based on estimated demand.
+
+Again, this is DEMO LOGIC.
+
+Do not claim machine learning is running.
+
+---
+
+# EXPLAINABILITY
+
+Every recommendation should have:
+
+* recommendation
+* confidence
+* primary reason
+* supporting metrics
+* assumptions
+* what would change the recommendation
+
+Examples:
+
+High confidence
+
+Medium confidence
+
+Low confidence
+
+Use tooltips explaining confidence.
+
+This will help us validate whether merchants trust the product.
+
+---
+
+# DEMO MODE LABEL
+
+Somewhere subtle in the application show:
+
+**Demo environment — sample data**
+
+Do not make the app look broken or unfinished.
+
+It should look like a real SaaS product populated with demo data.
+
+---
+
+# LANDING PAGE
+
+Also create a simple external landing page at `/`.
+
+Hero:
+
+# Stop guessing how hard you can push each product.
+
+Subheading:
+
+**StockPilot connects inventory with advertising performance so ecommerce owners know what to scale, hold, reduce, or pause before stock becomes the problem.**
+
+Buttons:
+
+**Explore Demo**
+
+**Request Early Access**
+
+Below hero show an example recommendation card:
+
+Black Hoodie
+
+REDUCE
+
+94 units left
+
+86% stockout risk before restock
+
+Current Meta spend: $210/day
+
+Then 3 benefits:
+
+### Scale with confidence
+
+Know which products have enough inventory to support more demand.
+
+### Catch stockouts earlier
+
+See when marketing momentum is likely to outrun replenishment.
+
+### Turn excess stock into opportunity
+
+Identify products with strong economics and room for more demand.
+
+Add section:
+
+# Shopify tells you what you have.
+
+# Meta tells you how your ads perform.
+
+# StockPilot helps you decide what to do next.
+
+This should be a major positioning statement.
+
+Then show simple visual:
+
+Shopify
+
+*
+
+Meta Ads
+
+↓
+
+StockPilot
+
+↓
+
+SCALE / INCREASE / HOLD / REDUCE / PAUSE
+
+Do not clutter the landing page with dozens of sections.
+
+---
+
+# RESPONSIVENESS
+
+Desktop should be the priority because this is primarily an ecommerce operations dashboard.
+
+But make it responsive on tablet/mobile.
+
+On mobile:
+
+* collapse sidebar
+* stack cards
+* make tables horizontally scrollable or convert intelligently
+* charts remain readable
+
+---
+
+# TECHNICAL IMPLEMENTATION
+
+Use a modern React stack supported well by Replit.
+
+Prefer:
+
+* React
+* TypeScript
+* Tailwind CSS
+* reusable components
+* Recharts or another clean charting library
+* lucide icons
+
+Do not overengineer backend infrastructure.
+
+Use:
+
+* centralized mock data
+* deterministic demo calculation functions
+* local state
+* local storage if useful
+
+If storing pilot requests is straightforward, use Replit's built-in database.
+
+Otherwise keep the demo frontend-only.
+
+Code should still be clean and structured as if we might later continue developing it.
+
+Create reusable components for:
+
+RecommendationBadge
+
+MetricCard
+
+ProductTable
+
+RiskBadge
+
+ConfidenceBadge
+
+ForecastChart
+
+SpendSimulator
+
+ProductCard
+
+IntegrationCard
+
+---
+
+# IMPORTANT UX DETAILS
+
+The demo must answer these questions within approximately 10 seconds of opening:
+
+1. What products are in danger?
+2. What products can I push harder?
+3. Why?
+4. What happens if I increase advertising?
+
+The owner should NOT need to understand:
+
+* machine learning
+* statistical forecasting
+* attribution theory
+* inventory science
+
+Use plain business language.
+
+Bad:
+
+**Multivariate demand elasticity forecast**
+
+Good:
+
+**At this spend level, you're likely to run out before restock.**
+
+Bad:
+
+**SKU-level time-series inference**
+
+Good:
+
+**Sales accelerated over the last two weeks.**
+
+---
+
+# VALIDATION PURPOSE
+
+Remember: this prototype is designed to learn whether merchants want the product.
+
+Therefore prioritize screens that generate reactions such as:
+
+“Can it actually do this with my store?”
+
+“Can I connect my Shopify account?”
+
+“Can this alert me automatically?”
+
+“Can it tell me this before I scale?”
+
+“How much would this cost?”
+
+Those reactions matter more than technically impressive implementation.
+
+---
+
+# DO NOT BUILD
+
+Do NOT implement:
+
+* real Shopify OAuth
+* real Shopify API
+* real Meta OAuth
+* Meta Marketing API
+* Google Ads
+* TikTok
+* real ML
+* OpenAI API
+* automated campaign changes
+* purchase orders
+* suppliers
+* ERP features
+* warehouse management
+* user permissions
+* teams
+* complex authentication
+* Stripe
+* full billing
+* email infrastructure
+* production security architecture
+
+Those belong to the real product after validation.
+
+---
+
+# FINAL QUALITY REQUIREMENTS
+
+Before considering the project finished:
+
+1. Ensure all pages work.
+2. Ensure navigation works.
+3. Ensure mock data stays consistent.
+4. Ensure simulator actually changes projections.
+5. Ensure charts render properly.
+6. Ensure no placeholder lorem ipsum remains.
+7. Ensure there are no broken buttons where interaction is expected.
+8. Ensure the design feels premium and credible.
+9. Ensure landing page and dashboard feel like the same product.
+10. Ensure the app clearly communicates the difference between inventory visibility and inventory-aware advertising decisions.
+11. Ensure the demo does not claim unsupported AI accuracy.
+12. Ensure there is a visible path to “Request Early Access.”
+13. Ensure the app looks impressive enough to screen-share with ecommerce founders.
+
+First create a detailed implementation plan and information architecture.
+
+Then build the application.
+
+Do not simplify away the Product Detail forecast view or Scenario Simulator. Those are the two most important parts of the validation demo.
